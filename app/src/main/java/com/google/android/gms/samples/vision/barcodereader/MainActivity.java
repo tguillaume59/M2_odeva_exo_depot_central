@@ -38,6 +38,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private CompoundButton useFlash;
     private TextView statusMessage;
     private TextView barcodeValue;
+    private Context mContext;
 
     private static final int RC_BARCODE_CAPTURE = 9001;
     private static final String TAG = "BarcodeMain";
@@ -46,6 +47,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mContext = this ;
 
         statusMessage = (TextView)findViewById(R.id.status_message);
         barcodeValue = (TextView)findViewById(R.id.barcode_value);
